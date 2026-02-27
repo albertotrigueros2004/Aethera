@@ -1,0 +1,49 @@
+body {
+  margin: 0;
+  font-family: 'Georgia', serif;
+  background: radial-gradient(circle at center, #0a0f2c, #000);
+  color: #e0e6ff;
+  text-align: center;
+}
+
+.screen {
+  display: none;
+  padding: 20px;
+}
+
+.screen.active {
+  display: block;
+}
+
+textarea {
+  width: 90%;
+  height: 100px;
+  background: #111;
+  color: #fff;
+  border: 1px solid #333;
+  padding: 10px;
+}
+
+input[type=range] {
+  width: 80%;
+}
+
+button {
+  margin: 10px;
+  padding: 10px 20px;
+  background: #1a237e;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.ritual {
+  margin-top: 40vh;
+  font-size: 1.2em;
+  opacity: 0;
+  animation: fadeIn 4s forwards;
+}
+
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
