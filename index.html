@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Aethera</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div id="introScreen" class="screen active">
+  <div class="stars"></div>
+  <h1 class="ritual">Esta noche el cambio comienza en silencio.</h1>
+  <button onclick="enterApp()">Entrar en Aethera</button>
+</div>
+
+<div id="appScreen" class="screen">
+  <h2>Aethera</h2>
+
+  <textarea id="goalInput" placeholder="Escribe lo que deseas manifestar..."></textarea>
+
+  <label>Duración (minutos)</label>
+  <input type="range" id="durationSlider" min="5" max="120" value="30">
+  <span id="durationValue">30</span>
+
+  <label>Frecuencia (Hz)</label>
+  <input type="range" id="freqSlider" min="100" max="600" value="369">
+  <span id="freqValue">369</span>
+  <div id="recommendation"></div>
+
+  <label>Volumen Voz</label>
+  <input type="range" id="voiceVol" min="0" max="1" step="0.1" value="1">
+
+  <label>Volumen Fondo</label>
+  <input type="range" id="bgVol" min="0" max="1" step="0.1" value="0.3">
+
+  <button onclick="startSession()">Iniciar Sesión</button>
+  <button onclick="stopSession()">Detener</button>
+
+  <button onclick="showStats()">Ver Estadísticas</button>
+</div>
+
+<div id="statsScreen" class="screen">
+  <h2>Estadísticas</h2>
+  <div id="statsContent"></div>
+  <button onclick="backToApp()">Volver</button>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
